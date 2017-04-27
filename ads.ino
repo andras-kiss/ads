@@ -9,7 +9,7 @@ ADS1115 adc0(ADS1115_ADDRESS_ADDR_GND);
 
 void setup(void)
 {
-  Serial.begin(230400);
+  Serial.begin(460800);
   Wire.begin();
   adc0.initialize();
   adc0.showConfigRegister();
