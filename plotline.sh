@@ -3,4 +3,3 @@ echo plot \""<\(tail -n '-10000' $\(ls -t | head -n1\) | sed -e '$ d' | sed -e '
 #ls -t | head -n1
 #echo set yrange \[343:343.5\]
 echo set yrange \[-1100:1100\]
-
