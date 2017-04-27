@@ -4,7 +4,7 @@
 
 
 ADS1115 adc0(ADS1115_ADDRESS_ADDR_GND); 
-float scalefactor = 0.0625; // change this to match your amplifier settings
+float scalefactor = 0.03125; // change this to match your amplifier settings
 float millivolts = 0.0; // The result of applying the scale factor to the raw value
 float time;
 
@@ -28,10 +28,10 @@ void setup(void)
 
   //                                                                 ScaleFactor  D.Input Impedance 
   // ads.setGain(ADS1115_PGA_6P144);  // 2/3x gain +/- 6.144V  1 bit = 0.1875mV    22MΩ        //start up default
-  //adc0.setGain(ADS1115_PGA_4P096);  // 1x gain   +/- 4.096V  1 bit = 0.125mV     15MΩ
-  adc0.setGain(ADS1115_PGA_2P048);  // 2x gain   +/- 2.048V  1 bit = 0.0625mV    4.9MΩ       // default for this library
-  // ads.setGain(ADS1115_PGA_1P024);  // 4x gain   +/- 1.024V  1 bit = 0.03125mV   2.4MΩ
-  // ads.setGain(ADS1115_PGA_0P512);  // 8x gain   +/- 0.512V  1 bit = 0.015625mV  710kΩ
+  // adc0.setGain(ADS1115_PGA_4P096);  // 1x gain   +/- 4.096V  1 bit = 0.125mV     15MΩ
+  // adc0.setGain(ADS1115_PGA_2P048);  // 2x gain   +/- 2.048V  1 bit = 0.0625mV    4.9MΩ       // default for this library
+  adc0.setGain(ADS1115_PGA_1P024);  // 4x gain   +/- 1.024V  1 bit = 0.03125mV   2.4MΩ
+  // adc0.setGain(ADS1115_PGA_0P512);  // 8x gain   +/- 0.512V  1 bit = 0.015625mV  710kΩ
   // ads.setGain(ADS1115_PGA_0P256);  // 16x gain  +/- 0.256V  1 bit = 0.0078125mV 710kΩ
 
   adc0.setMultiplexer(ADS1115_MUX_P0_N1);   // sets mux to differential
