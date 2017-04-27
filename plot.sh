@@ -1,7 +1,7 @@
 #!/bin/sh
 echo set grid
 while true; do
- echo set yrange \[-2000:2000\]
+ #echo set yrange \[-2000:2000\]
  echo set xlabel \"time, s\"
  echo set ylabel \"E, mV\"
  sh ./plotline.sh
