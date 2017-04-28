@@ -9,7 +9,7 @@ ADS1115 adc0(ADS1115_ADDRESS_ADDR_GND);
 
 void setup(void)
 {
-  Serial.begin(460800);
+  Serial.begin(115200);
   Wire.begin();
   adc0.initialize();
   adc0.showConfigRegister();
@@ -36,4 +36,5 @@ void loop(void)
   }
 }
 
-//cat /dev/ttyUSB0 460800 | awk '{printf "\n%.3f %i", NR/500,$1}' > data.dat
+//screen /dev/ttyUSB0 115200
+//cat /dev/ttyUSB0 115200 | awk '{printf "\n%.3f %.3f", NR/500,$1}' > data.dat
